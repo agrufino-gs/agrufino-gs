@@ -6,7 +6,7 @@
 
 <div align="center">
 
-# Agrufino Guzmán Gómez
+
 
 ### Founder · Identity & Security Engineer
 
