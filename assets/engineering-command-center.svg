@@ -1,445 +1,1535 @@
+```svg
+<?xml version="1.0" encoding="UTF-8"?>
+
 <svg
   width="1200"
-  height="360"
-  viewBox="0 0 1200 360"
+  height="560"
+  viewBox="0 0 1200 560"
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
   role="img"
   aria-labelledby="title description"
 >
   <title id="title">
-    Agrufino Guzmán Gómez — Identity and Security Engineer
+    Agrufino Guzmán Gómez Engineering Command Center
   </title>
 
   <desc id="description">
-   GitHub profile header for software engineer Agrufino Guzmán Gómez.
+    Personal engineering command center focused on identity, security,
+    automation, architecture and reliable software systems.
   </desc>
 
   <defs>
-    <clipPath id="frame">
-      <rect width="1200" height="360" rx="18" />
-    </clipPath>
 
-    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
+    <!-- Background grid -->
+
+    <pattern
+      id="grid"
+      width="32"
+      height="32"
+      patternUnits="userSpaceOnUse"
+    >
+      <path
+        d="M32 0H0V32"
+        fill="none"
+        stroke="#1A2029"
+        stroke-width="1"
+      />
+    </pattern>
+
+    <!-- Subgrid -->
+
+    <pattern
+      id="microGrid"
+      width="8"
+      height="8"
+      patternUnits="userSpaceOnUse"
+    >
+      <circle
+        cx="1"
+        cy="1"
+        r="0.6"
+        fill="#2A313C"
+      />
+    </pattern>
+
+    <!-- Main accent -->
+
+    <linearGradient
+      id="primaryAccent"
+      x1="0"
+      y1="0"
+      x2="1"
+      y2="1"
+    >
+      <stop
+        offset="0%"
+        stop-color="#58A6FF"
+      />
+
+      <stop
+        offset="50%"
+        stop-color="#8B5CF6"
+      />
+
+      <stop
+        offset="100%"
+        stop-color="#2DD4BF"
+      />
+    </linearGradient>
+
+    <!-- Top line -->
+
+    <linearGradient
+      id="topLine"
+      x1="0"
+      y1="0"
+      x2="1"
+      y2="0"
+    >
+      <stop
+        offset="0%"
+        stop-color="#58A6FF"
+        stop-opacity="0"
+      />
+
+      <stop
+        offset="18%"
+        stop-color="#58A6FF"
+      />
+
+      <stop
+        offset="50%"
+        stop-color="#8B5CF6"
+      />
+
+      <stop
+        offset="82%"
+        stop-color="#2DD4BF"
+      />
+
+      <stop
+        offset="100%"
+        stop-color="#2DD4BF"
+        stop-opacity="0"
+      />
+    </linearGradient>
+
+    <!-- Panel gradient -->
+
+    <linearGradient
+      id="panelSurface"
+      x1="0"
+      y1="0"
+      x2="1"
+      y2="1"
+    >
+      <stop
+        offset="0%"
+        stop-color="#171C24"
+      />
+
+      <stop
+        offset="100%"
+        stop-color="#11161D"
+      />
+    </linearGradient>
+
+    <!-- Scan line -->
+
+    <linearGradient
+      id="scanGradient"
+      x1="0"
+      y1="0"
+      x2="1"
+      y2="0"
+    >
+      <stop
+        offset="0%"
+        stop-color="#58A6FF"
+        stop-opacity="0"
+      />
+
+      <stop
+        offset="50%"
+        stop-color="#58A6FF"
+        stop-opacity="0.65"
+      />
+
+      <stop
+        offset="100%"
+        stop-color="#58A6FF"
+        stop-opacity="0"
+      />
+    </linearGradient>
+
+    <!-- Glow -->
+
+    <filter
+      id="softGlow"
+      x="-100%"
+      y="-100%"
+      width="300%"
+      height="300%"
+    >
+      <feGaussianBlur
+        stdDeviation="4"
+        result="blur"
+      />
+
       <feMerge>
         <feMergeNode in="blur" />
         <feMergeNode in="SourceGraphic" />
       </feMerge>
     </filter>
+
+    <filter
+      id="strongGlow"
+      x="-150%"
+      y="-150%"
+      width="400%"
+      height="400%"
+    >
+      <feGaussianBlur
+        stdDeviation="7"
+        result="blur"
+      />
+
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Subtle texture -->
+
+    <filter
+      id="texture"
+      x="0"
+      y="0"
+      width="100%"
+      height="100%"
+    >
+      <feTurbulence
+        type="fractalNoise"
+        baseFrequency="0.8"
+        numOctaves="3"
+        seed="24"
+        result="noise"
+      />
+
+      <feColorMatrix
+        in="noise"
+        type="saturate"
+        values="0"
+      />
+
+      <feComponentTransfer>
+        <feFuncA
+          type="table"
+          tableValues="0 0.035"
+        />
+      </feComponentTransfer>
+    </filter>
+
+    <!-- Clip -->
+
+    <clipPath id="frameClip">
+      <rect
+        x="1"
+        y="1"
+        width="1198"
+        height="558"
+        rx="18"
+      />
+    </clipPath>
+
+    <!-- Typography -->
+
+    <style>
+      .mono {
+        font-family:
+          ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Monaco,
+          Consolas,
+          "Liberation Mono",
+          "Courier New",
+          monospace;
+      }
+
+      .sans {
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          sans-serif;
+      }
+
+      .eyebrow {
+        font-family:
+          ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Monaco,
+          Consolas,
+          monospace;
+
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 1.8px;
+        fill: #7D8590;
+      }
+
+      .name {
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+
+        font-size: 39px;
+        font-weight: 760;
+        letter-spacing: -1.35px;
+        fill: #F0F6FC;
+      }
+
+      .role {
+        font-family:
+          ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Monaco,
+          Consolas,
+          monospace;
+
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 1.25px;
+        fill: #B1BAC4;
+      }
+
+      .statement {
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          sans-serif;
+
+        font-size: 12px;
+        fill: #8B949E;
+      }
+
+      .metric-label {
+        font-family:
+          ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Monaco,
+          Consolas,
+          monospace;
+
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 1.4px;
+        fill: #7D8590;
+      }
+
+      .metric-value {
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          sans-serif;
+
+        font-size: 29px;
+        font-weight: 700;
+        letter-spacing: -0.8px;
+        fill: #F0F6FC;
+      }
+
+      .metric-detail {
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          sans-serif;
+
+        font-size: 10px;
+        fill: #7D8590;
+      }
+
+      .domain-title {
+        font-family:
+          ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Monaco,
+          Consolas,
+          monospace;
+
+        font-size: 10px;
+        font-weight: 650;
+        letter-spacing: 0.8px;
+        fill: #C9D1D9;
+      }
+
+      .domain-index {
+        font-family:
+          ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Monaco,
+          Consolas,
+          monospace;
+
+        font-size: 9px;
+        fill: #58A6FF;
+      }
+
+      .surface-index {
+        font-family:
+          ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Monaco,
+          Consolas,
+          monospace;
+
+        font-size: 10px;
+        font-weight: 600;
+        fill: #58A6FF;
+      }
+
+      .surface-name {
+        font-family:
+          ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Monaco,
+          Consolas,
+          monospace;
+
+        font-size: 11px;
+        font-weight: 700;
+        fill: #D0D7DE;
+      }
+
+      .surface-description {
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          sans-serif;
+
+        font-size: 10px;
+        fill: #8B949E;
+      }
+
+      .surface-status {
+        font-family:
+          ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Monaco,
+          Consolas,
+          monospace;
+
+        font-size: 9px;
+        font-weight: 650;
+        letter-spacing: 0.8px;
+        fill: #3FB950;
+      }
+    </style>
   </defs>
 
-  <g clip-path="url(#frame)">
+  <!-- Main frame -->
+
+  <g clip-path="url(#frameClip)">
+
     <rect
-      width="1200"
-      height="360"
-      fill="#0D1117"
+      x="1"
+      y="1"
+      width="1198"
+      height="558"
+      rx="18"
+      fill="#0B0F14"
     />
 
-    <!-- Technical background grid -->
-
-    <g
-      stroke="#21262D"
-      stroke-width="1"
+    <rect
+      x="2"
+      y="2"
+      width="1196"
+      height="556"
+      rx="17"
+      fill="url(#grid)"
       opacity="0.72"
-    >
-      <path d="M0 40H1200" />
-      <path d="M0 80H1200" />
-      <path d="M0 120H1200" />
-      <path d="M0 160H1200" />
-      <path d="M0 200H1200" />
-      <path d="M0 240H1200" />
-      <path d="M0 280H1200" />
-      <path d="M0 320H1200" />
+    />
 
-      <path d="M40 0V360" />
-      <path d="M80 0V360" />
-      <path d="M120 0V360" />
-      <path d="M160 0V360" />
-      <path d="M200 0V360" />
-      <path d="M240 0V360" />
-      <path d="M280 0V360" />
-      <path d="M320 0V360" />
-      <path d="M360 0V360" />
-      <path d="M400 0V360" />
-      <path d="M440 0V360" />
-      <path d="M480 0V360" />
-      <path d="M520 0V360" />
-      <path d="M560 0V360" />
-      <path d="M600 0V360" />
-      <path d="M640 0V360" />
-      <path d="M680 0V360" />
-      <path d="M720 0V360" />
-      <path d="M760 0V360" />
-      <path d="M800 0V360" />
-      <path d="M840 0V360" />
-      <path d="M880 0V360" />
-      <path d="M920 0V360" />
-      <path d="M960 0V360" />
-      <path d="M1000 0V360" />
-      <path d="M1040 0V360" />
-      <path d="M1080 0V360" />
-      <path d="M1120 0V360" />
-      <path d="M1160 0V360" />
-    </g>
+    <rect
+      x="2"
+      y="2"
+      width="1196"
+      height="556"
+      rx="17"
+      fill="url(#microGrid)"
+      opacity="0.24"
+    />
 
-    <!-- Top control strip -->
+    <rect
+      x="2"
+      y="2"
+      width="1196"
+      height="556"
+      rx="17"
+      filter="url(#texture)"
+      opacity="0.7"
+    />
+
+    <!-- Top accent -->
+
+    <rect
+      x="0"
+      y="0"
+      width="1200"
+      height="3"
+      fill="url(#topLine)"
+    />
+
+    <!-- Ambient glows -->
+
+    <circle
+      cx="137"
+      cy="126"
+      r="100"
+      fill="#58A6FF"
+      opacity="0.035"
+      filter="url(#strongGlow)"
+    />
+
+    <circle
+      cx="1045"
+      cy="112"
+      r="120"
+      fill="#8B5CF6"
+      opacity="0.025"
+      filter="url(#strongGlow)"
+    />
+
+    <!-- Corner details -->
+
+    <path
+      d="M22 45V22H45"
+      stroke="#3A424D"
+      stroke-width="1"
+    />
+
+    <path
+      d="M1155 22H1178V45"
+      stroke="#3A424D"
+      stroke-width="1"
+    />
+
+    <path
+      d="M22 515V538H45"
+      stroke="#3A424D"
+      stroke-width="1"
+    />
+
+    <path
+      d="M1155 538H1178V515"
+      stroke="#3A424D"
+      stroke-width="1"
+    />
+
+    <!-- Header bar -->
 
     <rect
       x="28"
-      y="24"
+      y="23"
       width="1144"
       height="42"
       rx="9"
-      fill="#161B22"
-      stroke="#30363D"
+      fill="#12171E"
+      stroke="#2B323C"
     />
 
-    <circle cx="51" cy="45" r="5" fill="#3FB950">
+    <circle
+      cx="50"
+      cy="44"
+      r="4.5"
+      fill="#3FB950"
+      filter="url(#softGlow)"
+    >
       <animate
         attributeName="opacity"
         values="0.35;1;0.35"
         dur="2.2s"
         repeatCount="indefinite"
       />
+
+      <animate
+        attributeName="r"
+        values="4;5;4"
+        dur="2.2s"
+        repeatCount="indefinite"
+      />
     </circle>
 
     <text
-      x="67"
-      y="50"
-      fill="#8B949E"
-      font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
-      font-size="12"
-      letter-spacing="1.4"
-    >
-      PERSONAL ENGINEERING PROFILE
-    </text>
+      x="68"
+      y="48"
+      class="eyebrow"
+    >ENGINEERING COMMAND CENTER · SYSTEMS OPERATIONAL</text>
 
     <text
       x="1145"
-      y="50"
-      fill="#58A6FF"
+      y="48"
+      class="eyebrow"
       text-anchor="end"
-      font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
-      font-size="12"
-      letter-spacing="1.4"
-    >
-      IDENTITY / SECURITY / PLATFORM
-    </text>
+    >PERSONAL ENGINEERING PROFILE</text>
 
-    <!-- Personal identity block -->
+    <!-- Personal identity -->
 
     <rect
-      x="59"
-      y="111"
-      width="6"
-      height="154"
-      rx="3"
-      fill="#58A6FF"
+      x="58"
+      y="94"
+      width="5"
+      height="112"
+      rx="2.5"
+      fill="url(#primaryAccent)"
+      filter="url(#softGlow)"
     >
       <animate
         attributeName="height"
-        values="104;154;104"
-        dur="4.8s"
+        values="78;112;78"
+        dur="5s"
         repeatCount="indefinite"
       />
 
       <animate
         attributeName="y"
-        values="136;111;136"
-        dur="4.8s"
+        values="111;94;111"
+        dur="5s"
         repeatCount="indefinite"
       />
     </rect>
 
     <text
-      x="93"
-      y="151"
-      fill="#8B949E"
-      font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
-      font-size="13"
-      letter-spacing="3"
-    >
-      SOFTWARE ENGINEER
-    </text>
+      x="84"
+      y="116"
+      class="eyebrow"
+    >IDENTITY · SECURITY · SYSTEMS · AUTOMATION</text>
 
     <text
-      x="90"
-      y="205"
-      fill="#F0F6FC"
-      font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
-      font-size="43"
-      font-weight="700"
-      letter-spacing="1.4"
-    >
-      AGRUFINO GUZMÁN GÓMEZ
-    </text>
+      x="81"
+      y="163"
+      class="name"
+    >AGRUFINO GUZMÁN GÓMEZ</text>
 
     <text
-      x="93"
-      y="244"
-      fill="#C9D1D9"
-      font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
-      font-size="17"
-      letter-spacing="0.5"
-    >
-      Founder · Identity &amp; Security Engineer
-    </text>
+      x="84"
+      y="192"
+      class="role"
+    >FOUNDER · IDENTITY &amp; SECURITY ENGINEER</text>
 
     <text
-      x="93"
-      y="280"
-      fill="#8B949E"
-      font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
-      font-size="13"
-      letter-spacing="0.8"
-    >
-      Building secure infrastructure for modern software systems
-    </text>
+      x="84"
+      y="218"
+      class="statement"
+    >Designing explicit trust boundaries for secure software systems.</text>
 
-    <!-- Blinking terminal cursor -->
+    <!-- Pixel Blast 01 -->
 
-    <rect
-      x="589"
-      y="265"
-      width="9"
-      height="19"
-      rx="1"
-      fill="#58A6FF"
-    >
-      <animate
-        attributeName="opacity"
-        values="1;1;0;0"
-        keyTimes="0;0.45;0.5;1"
-        dur="1.15s"
-        repeatCount="indefinite"
-      />
-    </rect>
+    <g transform="translate(672 147)">
 
-    <!-- Right-side architecture panel -->
+      <rect
+        x="0"
+        y="0"
+        width="5"
+        height="5"
+        rx="1"
+        fill="#58A6FF"
+      >
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="0 0;42 -38"
+          dur="2.8s"
+          repeatCount="indefinite"
+        />
 
-    <rect
-      x="790"
-      y="94"
-      width="345"
-      height="202"
-      rx="14"
-      fill="#161B22"
-      stroke="#30363D"
-    />
-
-    <text
-      x="816"
-      y="123"
-      fill="#8B949E"
-      font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
-      font-size="11"
-      letter-spacing="1.5"
-    >
-      CURRENT ENGINEERING FOCUS
-    </text>
-
-    <line
-      x1="816"
-      y1="139"
-      x2="1109"
-      y2="139"
-      stroke="#30363D"
-    />
-
-    <text
-      x="816"
-      y="166"
-      fill="#C9D1D9"
-      font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
-      font-size="12"
-    >
-      01  IDENTITY INFRASTRUCTURE
-    </text>
-
-    <text
-      x="816"
-      y="194"
-      fill="#C9D1D9"
-      font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
-      font-size="12"
-    >
-      02  MULTI-TENANT SAAS
-    </text>
-
-    <text
-      x="816"
-      y="222"
-      fill="#C9D1D9"
-      font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
-      font-size="12"
-    >
-      03  API SECURITY
-    </text>
-
-    <text
-      x="816"
-      y="250"
-      fill="#C9D1D9"
-      font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
-      font-size="12"
-    >
-      04  CLOUD OPERATIONS
-    </text>
-
-    <!-- Animated status lines -->
-
-    <g>
-      <rect x="1058" y="157" width="51" height="4" rx="2" fill="#21262D" />
-      <rect x="1058" y="157" width="40" height="4" rx="2" fill="#3FB950">
         <animate
-          attributeName="width"
-          values="15;40;31;40"
-          dur="4s"
+          attributeName="opacity"
+          values="0;1;0"
+          dur="2.8s"
           repeatCount="indefinite"
         />
       </rect>
 
-      <rect x="1058" y="185" width="51" height="4" rx="2" fill="#21262D" />
-      <rect x="1058" y="185" width="35" height="4" rx="2" fill="#58A6FF">
+      <rect
+        x="0"
+        y="0"
+        width="4"
+        height="4"
+        rx="1"
+        fill="#8B5CF6"
+      >
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="0 0;58 -8"
+          dur="3.2s"
+          begin="0.2s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;1;0"
+          dur="3.2s"
+          begin="0.2s"
+          repeatCount="indefinite"
+        />
+      </rect>
+
+      <rect
+        x="0"
+        y="0"
+        width="6"
+        height="6"
+        rx="1"
+        fill="#2DD4BF"
+      >
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="0 0;35 32"
+          dur="3s"
+          begin="0.45s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;0.9;0"
+          dur="3s"
+          begin="0.45s"
+          repeatCount="indefinite"
+        />
+      </rect>
+
+      <rect
+        x="0"
+        y="0"
+        width="3"
+        height="3"
+        fill="#F0F6FC"
+      >
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="0 0;69 22"
+          dur="2.6s"
+          begin="0.7s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;0.75;0"
+          dur="2.6s"
+          begin="0.7s"
+          repeatCount="indefinite"
+        />
+      </rect>
+
+      <rect
+        x="0"
+        y="0"
+        width="4"
+        height="4"
+        rx="1"
+        fill="#58A6FF"
+      >
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="0 0;18 -56"
+          dur="3.4s"
+          begin="0.9s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;0.8;0"
+          dur="3.4s"
+          begin="0.9s"
+          repeatCount="indefinite"
+        />
+      </rect>
+
+      <rect
+        x="0"
+        y="0"
+        width="3"
+        height="3"
+        fill="#2DD4BF"
+      >
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="0 0;72 -44"
+          dur="3.1s"
+          begin="1.15s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;0.9;0"
+          dur="3.1s"
+          begin="1.15s"
+          repeatCount="indefinite"
+        />
+      </rect>
+
+      <circle
+        cx="2"
+        cy="2"
+        r="3"
+        fill="#58A6FF"
+        opacity="0.35"
+        filter="url(#softGlow)"
+      >
+        <animate
+          attributeName="r"
+          values="2;9;2"
+          dur="2.8s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;0.5;0"
+          dur="2.8s"
+          repeatCount="indefinite"
+        />
+      </circle>
+
+    </g>
+
+    <!-- Systems panel -->
+
+    <g transform="translate(756 89)">
+
+      <rect
+        width="416"
+        height="130"
+        rx="12"
+        fill="url(#panelSurface)"
+        stroke="#30363D"
+      />
+
+      <rect
+        x="1"
+        y="1"
+        width="414"
+        height="2"
+        rx="1"
+        fill="url(#topLine)"
+        opacity="0.8"
+      />
+
+      <text
+        x="20"
+        y="25"
+        class="eyebrow"
+      >SECURITY &amp; SYSTEMS MATRIX</text>
+
+      <line
+        x1="20"
+        y1="40"
+        x2="396"
+        y2="40"
+        stroke="#30363D"
+      />
+
+      <!-- Domain 01 -->
+
+      <text
+        x="20"
+        y="64"
+        class="domain-index"
+      >01</text>
+
+      <text
+        x="47"
+        y="64"
+        class="domain-title"
+      >IDENTITY CONTROL</text>
+
+      <rect
+        x="300"
+        y="58"
+        width="94"
+        height="4"
+        rx="2"
+        fill="#242B35"
+      />
+
+      <rect
+        x="300"
+        y="58"
+        width="77"
+        height="4"
+        rx="2"
+        fill="#58A6FF"
+      >
         <animate
           attributeName="width"
-          values="22;35;29;35"
+          values="54;77;65;77"
+          dur="4.2s"
+          repeatCount="indefinite"
+        />
+      </rect>
+
+      <!-- Domain 02 -->
+
+      <text
+        x="20"
+        y="86"
+        class="domain-index"
+      >02</text>
+
+      <text
+        x="47"
+        y="86"
+        class="domain-title"
+      >API SECURITY</text>
+
+      <rect
+        x="300"
+        y="80"
+        width="94"
+        height="4"
+        rx="2"
+        fill="#242B35"
+      />
+
+      <rect
+        x="300"
+        y="80"
+        width="83"
+        height="4"
+        rx="2"
+        fill="#8B5CF6"
+      >
+        <animate
+          attributeName="width"
+          values="61;83;72;83"
           dur="4.8s"
           repeatCount="indefinite"
         />
       </rect>
 
-      <rect x="1058" y="213" width="51" height="4" rx="2" fill="#21262D" />
-      <rect x="1058" y="213" width="44" height="4" rx="2" fill="#3FB950">
+      <!-- Domain 03 -->
+
+      <text
+        x="20"
+        y="108"
+        class="domain-index"
+      >03</text>
+
+      <text
+        x="47"
+        y="108"
+        class="domain-title"
+      >TRUST BOUNDARIES</text>
+
+      <rect
+        x="300"
+        y="102"
+        width="94"
+        height="4"
+        rx="2"
+        fill="#242B35"
+      />
+
+      <rect
+        x="300"
+        y="102"
+        width="88"
+        height="4"
+        rx="2"
+        fill="#2DD4BF"
+      >
         <animate
           attributeName="width"
-          values="28;44;35;44"
-          dur="5.2s"
+          values="67;88;75;88"
+          dur="5.1s"
           repeatCount="indefinite"
         />
       </rect>
 
-      <rect x="1058" y="241" width="51" height="4" rx="2" fill="#21262D" />
-      <rect x="1058" y="241" width="32" height="4" rx="2" fill="#58A6FF">
-        <animate
-          attributeName="width"
-          values="18;32;25;32"
-          dur="4.5s"
-          repeatCount="indefinite"
-        />
-      </rect>
     </g>
 
-    <!-- Moving data signal -->
+    <!-- Separator -->
+
+    <line
+      x1="28"
+      y1="242"
+      x2="1172"
+      y2="242"
+      stroke="#30363D"
+    />
+
+    <!-- Metrics -->
+
+    <g transform="translate(68 0)">
+
+      <text
+        x="0"
+        y="270"
+        class="metric-label"
+      >PUBLIC SYSTEMS</text>
+
+      <text
+        x="0"
+        y="311"
+        class="metric-value"
+      >3</text>
+
+      <text
+        x="0"
+        y="334"
+        class="metric-detail"
+      >Owned engineering repositories</text>
+
+    </g>
+
+    <line
+      x1="286"
+      y1="264"
+      x2="286"
+      y2="334"
+      stroke="#252C35"
+    />
+
+    <g transform="translate(328 0)">
+
+      <text
+        x="0"
+        y="270"
+        class="metric-label"
+      >ACTIVE / 30 DAYS</text>
+
+      <text
+        x="0"
+        y="311"
+        class="metric-value"
+      >2</text>
+
+      <text
+        x="0"
+        y="334"
+        class="metric-detail"
+      >Recently updated systems</text>
+
+    </g>
+
+    <line
+      x1="546"
+      y1="264"
+      x2="546"
+      y2="334"
+      stroke="#252C35"
+    />
+
+    <g transform="translate(588 0)">
+
+      <text
+        x="0"
+        y="270"
+        class="metric-label"
+      >SECURITY DOMAINS</text>
+
+      <text
+        x="0"
+        y="311"
+        class="metric-value"
+      >6</text>
+
+      <text
+        x="0"
+        y="334"
+        class="metric-detail"
+      >Identity · APIs · Sessions · Policies</text>
+
+    </g>
+
+    <line
+      x1="806"
+      y1="264"
+      x2="806"
+      y2="334"
+      stroke="#252C35"
+    />
+
+    <g transform="translate(848 0)">
+
+      <text
+        x="0"
+        y="270"
+        class="metric-label"
+      >OPERATING MODEL</text>
+
+      <text
+        x="0"
+        y="311"
+        class="metric-value"
+        style="font-size:24px"
+      >ZERO TRUST</text>
+
+      <text
+        x="0"
+        y="334"
+        class="metric-detail"
+      >Explicit authorization boundaries</text>
+
+    </g>
+
+    <!-- Divider -->
+
+    <line
+      x1="28"
+      y1="357"
+      x2="1172"
+      y2="357"
+      stroke="#30363D"
+    />
+
+    <!-- Active surfaces title -->
+
+    <text
+      x="68"
+      y="382"
+      class="eyebrow"
+    >ACTIVE ENGINEERING SURFACES</text>
+
+    <text
+      x="1140"
+      y="382"
+      class="eyebrow"
+      text-anchor="end"
+    >REAL-TIME SYSTEM VIEW</text>
+
+    <!-- Data path -->
 
     <path
-      d="M816 271H868L887 258L913 283L942 260L968 271H1109"
-      stroke="#58A6FF"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-dasharray="8 8"
-      opacity="0.85"
+      d="M68 397H1140"
+      stroke="#242B35"
+      stroke-width="1"
+      stroke-dasharray="5 8"
     >
       <animate
         attributeName="stroke-dashoffset"
-        from="32"
+        from="26"
         to="0"
         dur="2.2s"
         repeatCount="indefinite"
       />
     </path>
 
-    <circle
-      cx="1109"
-      cy="271"
-      r="5"
-      fill="#3FB950"
-      filter="url(#softGlow)"
-    >
-      <animate
-        attributeName="r"
-        values="4;7;4"
-        dur="2s"
-        repeatCount="indefinite"
+    <!-- Row 01 -->
+
+    <g>
+
+      <rect
+        x="55"
+        y="406"
+        width="1090"
+        height="29"
+        rx="6"
+        fill="#11161D"
+        stroke="#242B35"
       />
 
-      <animate
-        attributeName="opacity"
-        values="0.45;1;0.45"
-        dur="2s"
-        repeatCount="indefinite"
-      />
-    </circle>
+      <text
+        x="68"
+        y="425"
+        class="surface-index"
+      >01</text>
 
-    <!-- Bottom metadata -->
+      <text
+        x="108"
+        y="425"
+        class="surface-name"
+      >IDENTITY CONTROL PLANE</text>
+
+      <text
+        x="365"
+        y="425"
+        class="surface-description"
+      >Authentication, sessions, organizations and service identities</text>
+
+      <circle
+        cx="1030"
+        cy="420"
+        r="3"
+        fill="#3FB950"
+      >
+        <animate
+          attributeName="opacity"
+          values="0.35;1;0.35"
+          dur="1.8s"
+          repeatCount="indefinite"
+        />
+      </circle>
+
+      <text
+        x="1050"
+        y="424"
+        class="surface-status"
+      >ACTIVE</text>
+
+    </g>
+
+    <!-- Row 02 -->
+
+    <g>
+
+      <rect
+        x="55"
+        y="442"
+        width="1090"
+        height="29"
+        rx="6"
+        fill="#11161D"
+        stroke="#242B35"
+      />
+
+      <text
+        x="68"
+        y="461"
+        class="surface-index"
+      >02</text>
+
+      <text
+        x="108"
+        y="461"
+        class="surface-name"
+      >AUTHORIZATION ENGINE</text>
+
+      <text
+        x="365"
+        y="461"
+        class="surface-description"
+      >Permissions, policy evaluation and tenant isolation</text>
+
+      <circle
+        cx="1030"
+        cy="456"
+        r="3"
+        fill="#3FB950"
+      >
+        <animate
+          attributeName="opacity"
+          values="1;0.35;1"
+          dur="2.1s"
+          repeatCount="indefinite"
+        />
+      </circle>
+
+      <text
+        x="1050"
+        y="460"
+        class="surface-status"
+      >ACTIVE</text>
+
+    </g>
+
+    <!-- Row 03 -->
+
+    <g>
+
+      <rect
+        x="55"
+        y="478"
+        width="1090"
+        height="29"
+        rx="6"
+        fill="#11161D"
+        stroke="#242B35"
+      />
+
+      <text
+        x="68"
+        y="497"
+        class="surface-index"
+      >03</text>
+
+      <text
+        x="108"
+        y="497"
+        class="surface-name"
+      >SECURE INTEGRATION LAYER</text>
+
+      <text
+        x="365"
+        y="497"
+        class="surface-description"
+      >Signed events, replay protection and idempotent processing</text>
+
+      <circle
+        cx="1030"
+        cy="492"
+        r="3"
+        fill="#D29922"
+      >
+        <animate
+          attributeName="opacity"
+          values="0.25;1;0.25"
+          dur="2.6s"
+          repeatCount="indefinite"
+        />
+      </circle>
+
+      <text
+        x="1050"
+        y="496"
+        class="surface-status"
+        fill="#D29922"
+      >ITERATING</text>
+
+    </g>
+
+    <!-- Pixel Blast 02 -->
+
+    <g transform="translate(1134 492)">
+
+      <rect
+        x="0"
+        y="0"
+        width="4"
+        height="4"
+        rx="1"
+        fill="#58A6FF"
+      >
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="0 0;-41 -28"
+          dur="3s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;1;0"
+          dur="3s"
+          repeatCount="indefinite"
+        />
+      </rect>
+
+      <rect
+        x="0"
+        y="0"
+        width="5"
+        height="5"
+        rx="1"
+        fill="#8B5CF6"
+      >
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="0 0;-65 -4"
+          dur="3.3s"
+          begin="0.25s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;0.9;0"
+          dur="3.3s"
+          begin="0.25s"
+          repeatCount="indefinite"
+        />
+      </rect>
+
+      <rect
+        x="0"
+        y="0"
+        width="3"
+        height="3"
+        fill="#2DD4BF"
+      >
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="0 0;-32 36"
+          dur="2.8s"
+          begin="0.5s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;1;0"
+          dur="2.8s"
+          begin="0.5s"
+          repeatCount="indefinite"
+        />
+      </rect>
+
+      <rect
+        x="0"
+        y="0"
+        width="6"
+        height="6"
+        rx="1"
+        fill="#58A6FF"
+      >
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="0 0;-71 31"
+          dur="3.4s"
+          begin="0.8s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;0.75;0"
+          dur="3.4s"
+          begin="0.8s"
+          repeatCount="indefinite"
+        />
+      </rect>
+
+      <rect
+        x="0"
+        y="0"
+        width="3"
+        height="3"
+        fill="#F0F6FC"
+      >
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="0 0;-18 -49"
+          dur="2.9s"
+          begin="1.05s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;0.85;0"
+          dur="2.9s"
+          begin="1.05s"
+          repeatCount="indefinite"
+        />
+      </rect>
+
+      <circle
+        cx="1"
+        cy="1"
+        r="2"
+        fill="#8B5CF6"
+        opacity="0.3"
+        filter="url(#softGlow)"
+      >
+        <animate
+          attributeName="r"
+          values="2;8;2"
+          dur="3s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;0.45;0"
+          dur="3s"
+          repeatCount="indefinite"
+        />
+      </circle>
+
+    </g>
+
+    <!-- Footer -->
 
     <line
       x1="28"
-      y1="320"
+      y1="520"
       x2="1172"
-      y2="320"
+      y2="520"
       stroke="#30363D"
     />
 
     <text
       x="29"
-      y="342"
-      fill="#484F58"
-      font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
-      font-size="10"
-      letter-spacing="1.4"
-    >
-      SECURE BY DESIGN / EXPLICIT BOUNDARIES / OPERATIONAL CLARITY
-    </text>
+      y="543"
+      class="eyebrow"
+    >EXPLICIT TRUST BOUNDARIES · SECURE BY DESIGN · OPERATIONAL CLARITY</text>
 
     <text
       x="1171"
-      y="342"
-      fill="#484F58"
+      y="543"
+      class="eyebrow"
       text-anchor="end"
-      font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
-      font-size="10"
-      letter-spacing="1.4"
-    >
-      GITHUB PROFILE
-    </text>
+    >AGRUFINO-GS</text>
 
-    <!-- Vertical scanner -->
+    <!-- Animated scan -->
 
     <rect
       x="0"
-      y="70"
+      y="68"
       width="1200"
       height="1"
-      fill="#58A6FF"
+      fill="url(#scanGradient)"
       opacity="0"
     >
       <animate
         attributeName="y"
-        values="70;319"
-        dur="6s"
+        values="68;519"
+        dur="7s"
         repeatCount="indefinite"
       />
 
       <animate
         attributeName="opacity"
-        values="0;0.18;0.18;0"
-        keyTimes="0;0.15;0.85;1"
-        dur="6s"
+        values="0;0.42;0.42;0"
+        keyTimes="0;0.12;0.86;1"
+        dur="7s"
         repeatCount="indefinite"
       />
     </rect>
+
   </g>
+
+  <!-- External border -->
 
   <rect
     x="1"
     y="1"
     width="1198"
-    height="358"
-    rx="17"
+    height="558"
+    rx="18"
     stroke="#30363D"
     stroke-width="2"
   />
+
 </svg>
+```
