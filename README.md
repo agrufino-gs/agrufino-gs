@@ -1,163 +1,101 @@
 <div align="center">
 
 <img
-  src="./assets/profile-header.svg"
+  src="./assets/engineering-command-center.svg"
   width="100%"
-  alt="Agrufino Guzmán Gómez — Identity and Security Engineer"
+  alt="Agrufino Guzmán Gómez — Engineering Command Center"
 />
 
 <br />
 
-<a href="https://opendex.dev">
-  <img
-    src="https://img.shields.io/badge/Website-opendex.dev-0D1117?style=flat-square&logo=googlechrome&logoColor=58A6FF"
-    alt="Personal website"
-  />
-</a>
-
-<a href="https://x.com/Opendex_Cloud">
-  <img
-    src="https://img.shields.io/badge/X-@Opendex__Cloud-0D1117?style=flat-square&logo=x&logoColor=FFFFFF"
-    alt="X profile"
-  />
-</a>
-
-<a href="https://github.com/TU_USUARIO?tab=repositories">
-  <img
-    src="https://img.shields.io/badge/Repositories-Explore_my_work-0D1117?style=flat-square&logo=github&logoColor=FFFFFF"
-    alt="GitHub repositories"
-  />
-</a>
+[![Profile Engine](https://github.com/agrufino-gs/agrufino-gs/actions/workflows/update-profile.yml/badge.svg)](https://github.com/agrufino-gs/agrufino-gs/actions/workflows/update-profile.yml)
+[![AWS](https://img.shields.io/badge/AWS-Experienced-111318?style=flat-square&logo=amazonwebservices&logoColor=FF9900)](#cloud-engineering)
+[![Cloudflare](https://img.shields.io/badge/Cloudflare-Experienced-111318?style=flat-square&logo=cloudflare&logoColor=F38020)](#cloud-engineering)
+[![Azure](https://img.shields.io/badge/Azure-Experienced-111318?style=flat-square&logo=microsoftazure&logoColor=0078D4)](#cloud-engineering)
 
 </div>
 
 <br />
 
-## Engineering Profile
+# Agrufino Guzmán Gómez
 
-I am **Agrufino Guzmán Gómez**, a software engineer focused on identity systems, application security, cloud infrastructure and enterprise SaaS architecture.
+**Founder · Identity & Security Engineer**
 
-I build systems where authentication, authorization, tenant isolation, API boundaries and operational reliability are treated as architectural foundations—not features added at the end.
+I design and build identity systems, cloud infrastructure and enterprise-oriented software platforms.
 
-My current work combines product engineering with platform infrastructure, with particular attention to secure defaults, maintainable abstractions and developer experience.
+My work sits at the intersection of authentication, authorization, application security, API architecture, edge infrastructure and multi-tenant SaaS systems.
+
+I have hands-on experience working with **Amazon Web Services, Cloudflare and Microsoft Azure**, selecting services according to the security, operational and architectural requirements of each system.
+
+> [!IMPORTANT]
+> I treat identity, authorization and cloud security as architectural boundaries—not features added after implementation.
+
+---
+
+## Engineering Identity
 
 <table>
   <tr>
-    <td width="24%"><strong>Role</strong></td>
-    <td>Founder and Identity & Security Engineer</td>
+    <td width="25%"><strong>Discipline</strong></td>
+    <td>Identity, security and cloud engineering</td>
   </tr>
   <tr>
-    <td><strong>Primary focus</strong></td>
-    <td>Identity infrastructure, application security and multi-tenant SaaS</td>
+    <td><strong>Current direction</strong></td>
+    <td>Enterprise multi-tenant SaaS infrastructure</td>
   </tr>
   <tr>
-    <td><strong>Current work</strong></td>
-    <td>Building an enterprise-oriented SaaS platform and its supporting infrastructure</td>
+    <td><strong>Cloud experience</strong></td>
+    <td>Amazon Web Services, Cloudflare and Microsoft Azure</td>
+  </tr>
+  <tr>
+    <td><strong>Architecture focus</strong></td>
+    <td>Explicit trust boundaries, secure APIs and observable systems</td>
   </tr>
   <tr>
     <td><strong>Engineering style</strong></td>
-    <td>Security-conscious, systems-oriented and product-driven</td>
+    <td>Systems-oriented, security-conscious and product-driven</td>
   </tr>
 </table>
 
 ---
 
-## Current Direction
+## Current Mission
 
 <table>
   <tr>
-    <td width="50%" valign="top">
+    <td width="62%" valign="top">
 
-### Identity Systems
+### Enterprise Identity Infrastructure
 
-Designing authentication and authorization infrastructure for modern applications.
+I am currently building a personal enterprise-oriented SaaS project centered on identity, application security and cloud infrastructure.
 
-- OAuth 2.0 and OpenID Connect
-- Session and token lifecycle management
-- Role- and permission-based authorization
-- Tenant isolation
+The system explores the architecture required to support:
+
+- Multi-tenant organizations
+- Authentication and session management
+- Fine-grained authorization
+- API access control
+- Secure webhook delivery
 - Service-to-service authentication
-- Secure webhook validation
-
-    </td>
-
-    <td width="50%" valign="top">
-
-### Enterprise SaaS
-
-Building platform foundations intended to remain maintainable as products and organizations scale.
-
-- Multi-tenant architecture
-- Modular application boundaries
-- API-first service design
-- Subscription and entitlement systems
-- Auditability and observability
+- Subscription and entitlement boundaries
+- Audit events
+- Cloud-native application delivery
 - Developer-facing integrations
 
-    </td>
-  </tr>
-
-  <tr>
-    <td width="50%" valign="top">
-
-### Platform Engineering
-
-Working across application, infrastructure and delivery layers.
-
-- Cloud-native deployment
-- API gateways and edge services
-- Infrastructure automation
-- CI/CD pipelines
-- Runtime monitoring
-- Secure configuration management
+The objective is not simply to create another administration dashboard. The objective is to build the underlying platform required to operate secure software products.
 
     </td>
 
-    <td width="50%" valign="top">
-
-### Product Engineering
-
-Building interfaces and developer tools that make complex systems easier to understand and operate.
-
-- Design systems
-- Administrative interfaces
-- Developer dashboards
-- Typed application contracts
-- Accessible user experiences
-- Operational tooling
-
-    </td>
-  </tr>
-</table>
-
----
-
-## Currently Building
-
-<div align="center">
-
-<table>
-  <tr>
-    <td width="70%" valign="top">
-
-### Enterprise Identity and SaaS Platform
-
-A personal engineering project focused on building secure infrastructure for multi-tenant applications.
-
-The platform explores authentication, authorization, organization management, API access, secure webhooks, billing boundaries and cloud-native operations as parts of one coherent system.
-
-The objective is not merely to build another dashboard. The objective is to understand and implement the infrastructure required for a production-oriented software platform.
-
-    </td>
-
-    <td width="30%" valign="top">
+    <td width="38%" valign="top">
 
 ```text
-STATUS
-──────────────
-Architecture   Active
-Identity       Active
-API platform   Active
-Security       Iterating
-Operations     Iterating
-Documentation  In progress
+SYSTEM PROFILE
+──────────────────────────
+Architecture    Active
+Identity        Active
+Authorization   Active
+API platform    Active
+Cloud           Active
+Security        Iterating
+Observability   Iterating
+Documentation   In progress
