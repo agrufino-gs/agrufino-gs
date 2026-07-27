@@ -73,7 +73,7 @@
 <br>
 
 <p align="center">
-  <img src="./assets/engineering-command-center.svg" width="100%" alt="Engineering Command Center">
+  
 </p>
 
 </div>
