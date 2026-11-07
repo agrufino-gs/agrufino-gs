@@ -1,58 +1,17 @@
-<!--
-  PERSONAL PROFILE README
-  GitLab: https://gitlab.com/agru-gs
-  Profile repository: gitlab.com/agru-gs/agru-gs
-  Note: the full profile content lives on GitLab. This page is intentionally minimal.
--->
-
 <div align="center">
-
-<br>
-
-# Agrufino Guzmán Gómez
-
-**Founder · Identity, Security & Platform Engineer**
-
-<br>
-
-This profile is intentionally minimal.
-Projects, source code, and the complete engineering profile are maintained on GitLab.
-
-<br>
-
-<a href="https://gitlab.com/agru-gs">
-  <img src="https://img.shields.io/badge/GitLab-gitlab.com%2Fagru--gs-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white" alt="GitLab Profile — gitlab.com/agru-gs">
-</a>
-
-<br>
-<br>
-
-<p>
-  <a href="https://www.agrufino.com" title="Website">
-    <img src="https://img.shields.io/badge/Website-agrufino.com-0D1117?style=flat-square" alt="Website — agrufino.com">
-  </a>
-  &nbsp;
-  <a href="https://gitlab.com/agru-gs" title="GitLab">
-    <img src="https://img.shields.io/badge/GitLab-agru--gs-0D1117?style=flat-square&logo=gitlab&logoColor=white" alt="GitLab — agru-gs">
-  </a>
-  &nbsp;
-  <a href="mailto:contact@agrufino.com" title="Contact">
-    <img src="https://img.shields.io/badge/Contact-contact%40agrufino.com-0D1117?style=flat-square" alt="Contact — contact@agrufino.com">
-  </a>
-  &nbsp;
-  <a href="mailto:support@agrufino.com" title="Support — project support only">
-    <img src="https://img.shields.io/badge/Support-support%40agrufino.com-0D1117?style=flat-square" alt="Support — support@agrufino.com">
-  </a>
-</p>
-
-<br>
-
----
-
-<sub>
-Identity Engineering · Application Security · Multicloud Infrastructure · Android Engineering & Mobile Security Research
-</sub>
-
-<br>
-
+  <h1>Agrufino</h1>
+  <p>
+    My projects now live on GitLab.<br>
+    <sub>(Mis proyectos ahora están en GitLab.)</sub>
+  </p>
+  <p>
+    <a href="https://gitlab.com/agru-gs">
+      <img src="https://img.shields.io/badge/Explore_projects-GitLab-FC6D26?style=flat&logo=gitlab&logoColor=white" alt="Explore my projects on GitLab (Explora mis proyectos en GitLab)">
+    </a>
+  </p>
+  <p>
+    <a href="https://www.agrufino.com">Website <sub>(Sitio web)</sub></a>
+    &nbsp;·&nbsp;
+    <a href="mailto:contact@agrufino.com">Contact <sub>(Contacto)</sub></a>
+  </p>
 </div>
